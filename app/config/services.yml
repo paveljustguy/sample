@@ -1,0 +1,6 @@
+services:
+    app.denormalizer.user:
+        class: AppBundle\Serializer\UserDenormalizer
+        arguments: ["@doctrine.orm.entity_manager"]
+        tags:
+            - { name: serializer.normalizer }
